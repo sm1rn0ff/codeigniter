@@ -6,16 +6,6 @@
             parent::__construct();
         }
 
-        // public function _output()
-        // {
-
-        // }
-
-        // public function _remap($method)
-        // {
-        //     $this->bonjour();
-        // }
-
         public function index()
         {
             echo 'je suis sur l\'index';

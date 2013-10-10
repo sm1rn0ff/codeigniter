@@ -12,7 +12,7 @@
         <![endif]-->
         <!--[if lt IE 9]>
             <link rel="stylesheet" href="style_ie_9.css" />
-            
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
     <body>
