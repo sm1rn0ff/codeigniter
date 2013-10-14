@@ -29,6 +29,36 @@
 
         public function bonjour($nom = '')
         {
-            echo 'Bonjour ' . $nom . '!';
+            $data = array();
+            $data['cookie_id'] = $this->session->userdata('session_id');
+            $this->session->set_userdata('nom', 'nagasawa');
+            $this->session->set_userdata('prenom', 'antoine');
+
+            $data['nom'] = $this->session->userdata('nom');
+            $data['prenom'] = $this->session->userdata('prenom');
+
+            $this->load->view('cookie', $data);
+
+        }
+
+        public function validation()
+        {
+            $this->load->library('form_validation');
+
+            $this->form_validation->set_rules('pseudo', 'Votre login', 'required');
+            $this->form_validation->set_rules('mdp', 'Votre mote de passe', 'required');
+
+            $data = array();
+            $data['pseudo'] = $this->input->post('pseudo');
+            $data['mdp'] = $this->input->post('mdp');
+
+            if($this->form_validation->run())
+            {
+                $this->load->view('formulaire', $data);
+            }
+            else
+            {
+                $this->load->view('formulaire', $data);
+            }
         }
     }

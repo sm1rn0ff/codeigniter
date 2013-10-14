@@ -14,7 +14,7 @@
     {
         function js_url($name)
         {
-            return base_url() . 'assets/js' . $name . '.js';
+            return base_url() . 'assets/js/' . $name . '.js';
         }
     }
 
@@ -22,11 +22,11 @@
     {
         function img_url($name)
         {
-            return base_url() . 'assets/img' . $name;
+            return base_url() . 'assets/img/' . $name;
         }
     }
 
-    if(!function_exits('img'))
+    if(!function_exists('img'))
     {
         function img($nom, $alt = '')
         {
